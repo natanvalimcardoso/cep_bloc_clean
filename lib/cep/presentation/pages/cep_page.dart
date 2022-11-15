@@ -31,7 +31,6 @@ class CepPage extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  /*    BlocProvider.of<CepBloc>(context).add(GetCep(cepEC.text)); */
                   bloc.add(GetCep(cepEC.text));
                 },
                 child: const Text('Buscar'),
