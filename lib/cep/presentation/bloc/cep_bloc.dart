@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:cep_bloc_clean/cep/infra/repositories/cep_repository.dart';
+import '../../infra/repositories/cep_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../domain/usecases/receive_cep_usecase.dart';
