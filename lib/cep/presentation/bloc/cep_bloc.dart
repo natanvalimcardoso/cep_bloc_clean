@@ -13,11 +13,11 @@ class CepBloc extends Bloc<CepEvent, CepState> {
     on<GetCep>(_showCep);
   }
 
-  Future<void> _showCep(GetCep event, emit) async {
+  Future _showCep(GetCep event, emit) async {
     final usecase = ReceiveCepUsecaseImpl(CepRepositoryImpl(CepApi()));
     emit(const CepLoadingState());
     try {
-      final cep = await usecase.cepRepository.receiveCep(event.cep);
+      final cep = await usecase.call(event.cep);
       emit(CepLoadedState(cepModel: cep));
     } catch (e) {
       log(e.toString());

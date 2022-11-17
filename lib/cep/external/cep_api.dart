@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
 
 import 'package:http/http.dart' as https;
 
@@ -23,9 +22,4 @@ class CepApi implements CepDatasource {
       return throw (e.toString());
     }
   }
-}
-
-void main() {
-  final cep = CepApi().getCep('95560000');
-  log(cep.toString());
 }

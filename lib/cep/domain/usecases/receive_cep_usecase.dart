@@ -1,7 +1,7 @@
 import '../repositories/cep_repository.dart';
 
 abstract class IReceiveCepUsecase {
-  Future<void> call(String cep);
+  Future call(String cep);
 }
 
 class ReceiveCepUsecaseImpl implements IReceiveCepUsecase {
@@ -10,7 +10,7 @@ class ReceiveCepUsecaseImpl implements IReceiveCepUsecase {
   const ReceiveCepUsecaseImpl(this.cepRepository);
 
   @override
-  Future<void> call(String cep) async {
+  Future call(String cep) async {
      await cepRepository.receiveCep(cep);
   } 
 }
