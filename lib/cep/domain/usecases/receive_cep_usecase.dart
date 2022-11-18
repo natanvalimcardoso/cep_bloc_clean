@@ -11,6 +11,6 @@ class ReceiveCepUsecaseImpl implements IReceiveCepUsecase {
 
   @override
   Future call(String cep) async {
-     await cepRepository.receiveCep(cep);
+     return await cepRepository.receiveCep(cep);
   } 
 }
